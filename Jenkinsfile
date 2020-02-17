@@ -12,7 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'flake8'
-                sh 'isort --check-only'
+                sh 'isort --check-only -vb'
             }
         }
     }
