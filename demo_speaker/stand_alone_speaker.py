@@ -66,9 +66,9 @@ def main():
     filename = "model_data_speaker_sparse.npy"
 
     keras_proc = kp.MachineLearning()
-    model_data = keras_proc.load_model(filename)
+    model_data, message = keras_proc.load_model(filename)
 
-    print(model_data["message"], "\n")
+    print(message, "\n")
 
     if not model_data["loaded"]:
         print("Failed to load model!")
